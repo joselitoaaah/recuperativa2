@@ -7,4 +7,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity3">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/texto_mapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mapa de Puntos de Interés"
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
+        <RelativeLayout
+            android:id="@+id/contenedor_mapa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/texto_mapa"
+            android:layout_marginTop="10dp"
+            android:background="#D3D3D3">
+            <!-- Aquí colocaremos el mapa más adelante -->
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
